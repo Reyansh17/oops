@@ -2,22 +2,23 @@
 #include<string.h>
 using namespace std;
 class hero{
-    private:
-    int a;
-    int b;
+
+    static int count;
 
     public:
-hero(){
+   hero(){
    
     count++;
 
 }
-static int count;
+ static int putdata(){
+    return count;
+}
 
 };
 int hero::count=0;
 int main(){
 hero h1,h2,h3,h4;
-cout<<hero::count;
+cout<<hero::putdata();
 
 }
